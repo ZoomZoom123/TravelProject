@@ -23,13 +23,9 @@ public class Main {
         // Part 1 - Greeting
         Scanner input = new Scanner(System.in);
         System.out.println("Welcome to your VACATION PLANNER!");
-        System.out.print("How many people will be going on this trip? ");
-        int numberOfTravelers = input.nextInt();
-        System.out.println("Preparing trip for "+ numberOfTravelers + ".");
-        System.out.println("");
         System.out.print("Who will be going on this trip? ");
-        var name = input.nextLine();
-        System.out.println(name.toUpperCase() + "let's get started!");
+        String names = input.nextLine();
+        System.out.println(names.toUpperCase() + " let's get started!");
         System.out.print("Where you travelling to? ");
         destination = input.next();
     }
@@ -71,30 +67,31 @@ public class Main {
         int krBudgetPerDay = tripBudgetKrw / daysOfTrip;
 
         if (korea) {
-            System.out.print("Your budget is $" + tripBudgetUsd + ". The exchange rate is ₩" + tripBudgetKrw + ".");
-            System.out.print("Your budget is ₩" + tripBudgetUsd + ". You can spend ₩" + krBudgetPerDay + " on a daily basis.");
+            System.out.println("Your budget is $" + tripBudgetUsd + ". The exchange rate is ₩" + tripBudgetKrw + ".");
+            System.out.println("Your budget is ₩" + tripBudgetKrw + ". You can spend ₩" + krBudgetPerDay + " on a daily basis.");
         } else if (japan) {
-            System.out.print("Your budget is $" + tripBudgetUsd + ". The exchange rate is ¥" + tripBudgetJpy + ".");
-            System.out.print("Your budget is ¥" + tripBudgetJpy + ". You can spend ¥" + jpBudgetPerDay + " on a daily basis.");
+            System.out.println("Your budget is $" + tripBudgetUsd + ". The exchange rate is ¥" + tripBudgetJpy + ".");
+            System.out.println("Your budget is ¥" + tripBudgetJpy + ". You can spend ¥" + jpBudgetPerDay + " on a daily basis.");
         } else {
-            System.out.print("Your budget is $" + tripBudgetUsd + ".");
-            System.out.print("Your budget is $" + tripBudgetUsd + ". You can spend $" + usBudgetPerDay + " on a daily basis.");
+            System.out.println("Your budget is $" + tripBudgetUsd + ".");
+            System.out.println("Your budget is $" + tripBudgetUsd + ". You can spend $" + usBudgetPerDay + " on a daily basis.");
         }
     }
 
     public static void timeDifference() {
         Scanner input = new Scanner(System.in);
-        System.out.println("What is the time zone difference of your home to your destination? ");
+        System.out.print("What is the time zone difference of your home to your destination? ");
         int timeDifference = input.nextInt();
         int timeDifferenceFromDestination = timeDifference % 24;
-        System.out.println("The time will be " + timeDifferenceFromDestination + ", when it is midnight local time.");
+        System.out.println("The time will be " + timeDifferenceFromDestination + ":00, when it is midnight local time.");
     }
 
     public static void areaOfDestination() {
         Scanner input = new Scanner(System.in);
         System.out.print("What is the area of your destination in km^2? ");
-        int areaOfDestination = input.nextInt();
-        int areaOfDestinationInMiles = areaOfDestination % 100;
-        System.out.println("The area of " + destination + "in miles is " + areaOfDestinationInMiles + ".");
+        double areaOfDestinationInKm = input.nextDouble();
+        int  areaMath = (int) (areaOfDestinationInKm * 0.62137);
+        double areaOfDestinationInMiles = areaMath / 100.0;
+        System.out.println("The area of " + destination + " in miles is " + areaOfDestinationInMiles + ".");
     }
 }
