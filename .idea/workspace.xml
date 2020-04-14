@@ -15,6 +15,7 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIEW_PUSH_PROTECTED_ONLY" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1aV6cWTXy4oxTYGmdxgKUNHZbIl" />
@@ -54,7 +55,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1586808493712</updated>
-      <workItem from="1586808496663" duration="8185000" />
+      <workItem from="1586808496663" duration="9408000" />
     </task>
     <servers />
   </component>
@@ -62,10 +63,14 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="271" y="170" key="FileChooserDialogImpl" timestamp="1586900227949">
+    <state x="711" y="71" key="#Notifications" timestamp="1586901031293">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="271" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1586900227949" />
+    <state x="711" y="71" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1586901031293" />
+    <state x="271" y="170" key="FileChooserDialogImpl" timestamp="1586900327471">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="271" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1586900327471" />
     <state width="723" height="210" key="GridCell.Tab.0.bottom" timestamp="1586900069790">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -82,9 +87,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="723" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1586900069790" />
-    <state x="0" y="58" key="SettingsEditor" timestamp="1586900228840">
+    <state x="0" y="58" key="SettingsEditor" timestamp="1586901289726">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="0" y="58" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1586900228840" />
+    <state x="0" y="58" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1586901289726" />
   </component>
 </project>

@@ -4,9 +4,6 @@ public class Main {
 
         // Instance variables
     private String destination;
-    private boolean japan = destination.contains("Japan") || destination.contains("Tokyo") || destination.contains("Osaka") || destination.contains("Kyoto");
-    private boolean korea = destination.equals("Korea") || destination.contains("Seoul") || destination.contains("Busan");
-    private boolean usa = destination.equals("US") || destination.contains("USA") || destination.contains("NYC") || destination.contains("LA") || destination.contains("Seattle") || destination.contains("Chicago");
 
     public static void main(String[] args){
             // Part 1 - Greeting
@@ -18,6 +15,9 @@ public class Main {
             // Part 4 - Country Area
         areaOfDestination();
     }
+    private boolean japan = destination.contains("Japan") || destination.contains("Tokyo") || destination.contains("Osaka") || destination.contains("Kyoto");
+    private boolean korea = destination.contains("Korea") || destination.contains("Seoul") || destination.contains("Busan");
+    private boolean usa = destination.contains("US") || destination.contains("USA") || destination.contains("NYC") || destination.contains("LA") || destination.contains("Seattle") || destination.contains("Chicago");
 
     public static void greeting() {
         // Part 1 - Greeting
@@ -26,8 +26,10 @@ public class Main {
         System.out.print("How many people will be going on this trip? ");
         int numberOfTravelers = input.nextInt();
         System.out.print("\nPreparing trip for "+ numberOfTravelers + ".");
+        System.
         System.out.print("\nWhere you travelling to? ");
         String destination = input.next();
+
         if (japan){
             // Traveling to Japan
             System.out.println("Great! " + destination.toUpperCase() + " sounds like a great trip. There are lots to do in the Land of the Rising Sun");
@@ -43,6 +45,8 @@ public class Main {
             System.exit(0);
         }
     }
+
+
     public static void travelTime() {
 
         Scanner input = new Scanner(System.in);
@@ -72,7 +76,6 @@ public class Main {
             System.out.print("Your budget is $" + tripBudgetUsd + ". You can spend $" + usBudgetPerDay + " on a daily basis.");
         }
     }
-
 
     public static void timeDifference() {
         Scanner input = new Scanner(System.in);
