@@ -1,37 +1,33 @@
 import java.util.Scanner;
 
 public class Main {
-    String travelingTo;
 
-    public Main() {
-        travelingTo = destination;
-    }
+        // Instance variables
+    private String destination;
+    private boolean japan = destination.contains("Japan") || destination.contains("Tokyo") || destination.contains("Osaka") || destination.contains("Kyoto");
+    private boolean korea = destination.equals("Korea") || destination.contains("Seoul") || destination.contains("Busan");
+    private boolean usa = destination.equals("US") || destination.contains("USA") || destination.contains("NYC") || destination.contains("LA") || destination.contains("Seattle") || destination.contains("Chicago");
 
     public static void main(String[] args){
-        Scanner input = new Scanner(System.in);
-        boolean korea = destination.equals("Japan") || destination.contains("Tokyo") || destination.contains("Osaka") || destination.contains("Kyoto");
-        boolean japan = destination.equals("Korea") || destination.contains("Seoul") || destination.contains("Busan");
-        boolean usa = destination.equals("US") || destination.contains("USA") || destination.contains("NYC") || destination.contains("LA") || destination.contains("Seattle") || destination.contains("Chicago");
             // Part 1 - Greeting
-        greeting(input);
-
+        greeting();
             // Part 2 - Travel Time and Budget
-        travelTime(input);
+        travelTime();
             // Part 3 - Time Difference
-        timeDifference(input);
+        timeDifference();
             // Part 4 - Country Area
-        areaOfDestination(input);
+        areaOfDestination();
     }
 
-    public static void greeting(Scanner input) {
+    public static void greeting() {
         // Part 1 - Greeting
+        Scanner input = new Scanner(System.in);
         System.out.println("Welcome to your VACATION PLANNER!");
         System.out.print("How many people will be going on this trip? ");
         int numberOfTravelers = input.nextInt();
         System.out.print("\nPreparing trip for "+ numberOfTravelers + ".");
         System.out.print("\nWhere you travelling to? ");
         String destination = input.next();
-
         if (japan){
             // Traveling to Japan
             System.out.println("Great! " + destination.toUpperCase() + " sounds like a great trip. There are lots to do in the Land of the Rising Sun");
@@ -47,13 +43,14 @@ public class Main {
             System.exit(0);
         }
     }
-    public static void travelTime(Scanner input) {
+    public static void travelTime() {
+
+        Scanner input = new Scanner(System.in);
         // Part 2 - Travel Time
         System.out.print("\nHow many days are they going to spend at your destination? ");
         int daysOfTrip = input.nextInt();
         int hoursOfTrip = daysOfTrip * 24;
         System.out.print("If you are traveling to " + destination + " for " + daysOfTrip + " days, that is the same as " + hoursOfTrip + " hours.");
-
         // Part 2 - Budget
         System.out.print("\nWhat is your total budget for the trip in USD? $");
 
@@ -77,15 +74,16 @@ public class Main {
     }
 
 
-    public static void timeDifference(Scanner input) {
+    public static void timeDifference() {
+        Scanner input = new Scanner(System.in);
         System.out.println("What is the time zone difference of your home to your destination? ");
         int timeDifference = input.nextInt();
         int timeDifferenceFromDestination = timeDifference % 24;
-
         System.out.println("The time will be " + timeDifferenceFromDestination + ", when it is midnight local time.");
     }
 
-    public static void areaOfDestination(Scanner input) {
+    public static void areaOfDestination() {
+        Scanner input = new Scanner(System.in);
         System.out.print("What is the area of your destination in km^2? ");
         int areaOfDestination = input.nextInt();
     }
